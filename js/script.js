@@ -12,13 +12,17 @@ const app = createApp ({
         ]
     }),
     methods: {
-        // Funzione per spuntare gli elementi dalla lista
+        // Funzione per spuntare gli elementi dalla list
         toggleTask(id) {
             this.tasks.forEach(task => {
                 if (id === task.id) {
                     task.done = !task.done
                 }
             })
+        },
+        // Funzione per rimuovere il task
+        deleteTask(id) {
+            this.tasks = this.tasks.filter(task => id !== task.id);
         }
     }
 });

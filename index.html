@@ -39,8 +39,9 @@
                             <ul class="list-group">
                                 <li v-for="task in tasks" class="list-group-item text-white rounded-pill border-0 my-2 py-1 d-flex justify-content-between align-items-center">
                                     <span @click="toggleTask(task.id)" :class="{'text-decoration-line-through':task.done}">{{ task.text }}</span>
-                                    <button type="button" class="btn ms-3 text-white"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button type="button" class="btn ms-3 text-white" @click="deleteTask(task.id)"><i class="fa-solid fa-trash-can"></i></button>
                                 </li>
+                                <li><h2 class="mx-3 fs-4 text-white text-center" v-show="!tasks.length">Non sono presenti task.</h2></li>
                                 <li class="list-unstyled">
                                     <div class="input-group mt-2">
                                         <input type="text" class="form-control me-2 py-2 rounded-start-pill border-0" placeholder="Aggiungi un task.">
