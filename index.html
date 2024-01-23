@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List!</title>
+    <title>To Do List</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -33,12 +33,12 @@
             </header>
             <main class="w-50 mx-auto">
                 <div class="row justify-content-center my-5">
-                    <div class="card w-75 text-center mb-3">
+                    <div class="card w-75 rounded-4 text-center mb-3">
                         <div class="card-body align-self-center">
-                            <h2 class="mb-3 text-white text-center card-title">Cose da fare!</h2>
+                            <h2 class="mb-3 text-white text-center card-title">Cose da fare:</h2>
                             <ul class="list-group">
                                 <li v-for="task in tasks" class="list-group-item text-white rounded-pill border-0 my-2 py-1 d-flex justify-content-between align-items-center">
-                                    {{ task.text }}
+                                    <span @click="toggleTask(task.id)" :class="{'text-decoration-line-through':task.done}">{{ task.text }}</span>
                                     <button type="button" class="btn ms-3 text-white"><i class="fa-solid fa-trash-can"></i></button>
                                 </li>
                                 <li class="list-unstyled">
