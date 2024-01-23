@@ -1,0 +1,36 @@
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(7,5,41);
+    background: linear-gradient(90deg, rgba(7,5,41,1) 0%, rgba(133,90,253,1) 36%, rgba(190,155,191,1) 94%);
+}
+
+.card {
+    background-color: #1C1A42;
+}
+
+.list-group-item {
+    background-color: #855AFD;
+}
+
+.fa-trash-can {
+    font-size: 1rem;
+}
+
+.text-c{
+    color: #00E165;
+}
+
+.fa-plus {
+    font-size: 1.4rem;
+    color: #fff;
+    position: relative;
+    right: 2px;
+    top: 2px;
+}
+
+.button {
+    border-color: rgba(133, 90, 253, 0.8);
+    background-color: rgba(133, 90, 253);
+    color: white;
+}
