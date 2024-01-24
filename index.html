@@ -44,8 +44,8 @@
                                 <li><h2 class="mx-3 fs-4 text-white text-center" v-show="!tasks.length">Non sono presenti task.</h2></li>
                                 <li class="list-unstyled">
                                     <div class="input-group mt-2">
-                                        <input type="text" class="form-control me-2 py-2 rounded-start-pill border-0" placeholder="Aggiungi un task.">
-                                        <button class="button px-2 rounded-end-circle" type="button"><i class="fa-solid fa-plus"></i></button>
+                                        <input type="text" class="form-control me-2 py-2 rounded-start-pill border-0" placeholder="Aggiungi un task." v-model.trim="newTaskText">
+                                        <button class="button px-2 rounded-end-circle" type="button" @click="addTask"><i class="fa-solid fa-plus"></i></button>
                                     </div>                                    
                                 </li>
                             </ul>
